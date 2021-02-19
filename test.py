@@ -248,11 +248,6 @@ def main():
         signal.signal(signal.SIGALRM, alarm_handler)
         signal.alarm(args.timeout)
 
-    try:
-        os.mkdir(os.path.abspath("./logs"))
-    except:
-        pass
-
     if args.log:
         logfile = open(args.log, "w")
     else:
