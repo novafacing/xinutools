@@ -332,9 +332,6 @@ def main():
                         log = True
                         if args.log:
                             logfile.write(LOOK_FOR)
-                        else:
-                            sys.stdout.write(LOOK_FOR)
-                            sys.stdout.flush()
 
                 if log and args.log:
                     logfile.write(byte)
