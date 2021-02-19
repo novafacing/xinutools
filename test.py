@@ -345,7 +345,8 @@ def main():
             print(e)
             break
 
-    logfile.close()
+    if logfile is not None:
+        logfile.close()
 
 
 if __name__ == "__main__":
