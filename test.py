@@ -230,7 +230,7 @@ def main():
         dest="timeout",
         action="store",
         type=int,
-        default=30,
+        default=0,
         help="Timeout to run for in seconds",
     )
     parser.add_argument(
@@ -243,7 +243,7 @@ def main():
     )
     args = parser.parse_args()
 
-    if args.timeout:
+    if args.timeout > 0:
         signal.signal(signal.SIGALRM, alarm_handler)
         signal.alarm(args.timeout)
 
