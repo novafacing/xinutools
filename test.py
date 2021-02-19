@@ -222,7 +222,6 @@ def main():
         "-l",
         dest="log",
         action="store",
-        required=True,
         help="The name of the file to log to.",
     )
     parser.add_argument(
